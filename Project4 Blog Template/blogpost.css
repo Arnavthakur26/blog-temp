@@ -1,0 +1,112 @@
+.navbar {
+  position: relative;
+  height: 50px;
+  /* background-color: rgb(43, 226, 211); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 20px -5px rgba(78, 77, 77, 0.67);
+}
+.left-sec img {
+  height: 50px;
+  width: 50px;
+}
+.left-sec {
+  display: flex;
+}
+.nav-items {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0px 60px 0px 60px;
+}
+.nav-items li {
+  margin: 10px 10px 10px 20px;
+  position: relative;
+}
+.nav-items li a {
+  text-decoration: none;
+  color: black;
+}
+.nav-items a::before {
+  content: "";
+  border-bottom: 2px solid rgb(173, 32, 32);
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  bottom: 0px;
+  left: 0%;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+.nav-items a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.right-sec {
+  margin: 20px;
+}
+.right-sec #search {
+  margin: 20px;
+}
+.more-like {
+  display: grid;
+  height: 500px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.article {
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 20px 30px -5px rgba(0, 0, 0, 0.164);
+  transition: transform 150ms ease-in;
+  cursor: pointer;
+  overflow: hidden;
+}
+.article-img {
+  height: 250px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-image: url("img/2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform 150ms ease-in;
+}
+.article-content {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.article a {
+  text-decoration: none;
+  color: black;
+}
+.article h3 {
+  padding-bottom: 10px;
+}
+
+.article:hover .article-img {
+  transform: scale(1.04);
+}
+.article-content {
+  height: 80vw;
+  width: 80vw;
+  /* background-color: cadetblue; */
+}
+.article-content h1 {
+  font-size: 2.5rem;
+  padding: 60px 20px 60px 20px;
+}
+.article-content p {
+  padding: 60px 20px 60px 20px;
+}
+.article-content img {
+  display: block;
+  width: 50%;
+  margin: auto;
+  height: 400px;
+}
